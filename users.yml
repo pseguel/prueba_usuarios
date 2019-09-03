@@ -4,7 +4,7 @@
 
   tasks:
   - name: revisar usuarios
-    command: cat /etc/passwd | cut -d: -f1 | tr "," "\n"
+    shell: 'cat /etc/passwd | cut -d: -f1 | tr "," "\n"'
     register: lista_users
 
   - name: imprimir lista usuarios
