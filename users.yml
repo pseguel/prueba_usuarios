@@ -1,0 +1,14 @@
+---
+- name: playbook ejemplo
+  hosts: all
+
+  tasks:
+  - name: revisar usuarios
+    command: cat /etc/passwd
+    register: lista_users
+
+  - name: imprimir lista usuarios
+    debug: 
+      var: lista_users.stdout 
+
+
